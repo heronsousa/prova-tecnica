@@ -15,6 +15,58 @@
                 src="img/EloGroup.png" 
                 alt="EloGroup Logo"
             >
+
+            <section class="form">
+                <h2>FORMULARIO TOP</h2>
+    
+                <form action="/" method="POST">
+                    <input 
+                        type="text" 
+                        name="name" 
+                        placeholder="Nome completo"
+                    >
+                    
+                    <input 
+                        type="text" 
+                        name="phone" 
+                        placeholder="Telefone"
+                    >
+                    
+                    <select id="met">
+                        <option value="" disabled selected>Como nos conheceu?</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="linkedin">Linkedin</option>
+                        <option value="elogroup">Site da EloGroup</option>
+                        <option value="indication">Indicação</option>
+                        <option value="telegram">Telegram</option>
+                        <option value="whatsapp">WhatsApp</option>
+                        <option value="catho">Catho</option>
+                        <option value="other">Outro</option>
+                    </select>
+
+                    <input 
+                        type="text" 
+                        name="other" 
+                        placeholder="Qual?"
+                    >
+
+                    <p>Possui redes sociais?</p>
+                    <input type="radio" id="yes" name="yes" value="Sim">
+                    <label for="yes">Sim</label>
+                    <input type="radio" id="no" name="no" value="Não">
+                    <label for="no">Não</label>
+
+                    <input type="checkbox" id="facebook" name="facebook" value="Facebook">
+                    <label for="facebook">Facebook</label>
+                    <input type="checkbox" id="instagram" name="instagram" value="Instagram">
+                    <label for="instagram">Instagram</label>
+                    <input type="checkbox" id="linkedin" name="linkedin" value="Linkedin">
+                    <label for="linkedin">Linkedin</label>
+
+                    <button>ENVIAR</button>
+                </form>
+            </section>
         </main>
     </body>
 </html>
