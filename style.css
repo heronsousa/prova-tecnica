@@ -22,7 +22,7 @@ main {
     gap: 50px;
     align-items: center;
     
-    padding: 30px;
+    padding: 10px 40px 30px;
 
     border: 1px solid #444;
     border-radius: 4px;
@@ -35,9 +35,117 @@ main {
 
 .form h2 {
     text-align: center;
+    color: rgb(249, 178, 51);
 }
 
 form {
     display: flex;
     flex-direction: column;
+}
+
+form input, form button, form select {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px #333 solid;
+    background-color: white;
+}
+
+form select {
+    cursor: pointer;
+}
+
+.select-social-media, .social-media {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+}
+
+.social-media .checkmark {
+    border-radius: 50%;
+}
+  
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+  
+.container input:checked ~ .checkmark {
+    background-color: rgb(249, 178, 51);
+}
+  
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+.container .checkmark:after {
+    left: 5px;
+    top: 3px;
+    width: 2px;
+    height: 5px;
+    border: 1px solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.social-media .container .checkmark:after {
+    top: 5px;
+    width: 2px;
+	height: 2px;
+	border-radius: 50%;
+	background: white;
+}
+
+form button {
+    font-weight: bold;
+    font-size: 14px;    
+    color: white;
+    background-color: rgb(249, 178, 51);
+
+    border: 0;
+
+    cursor: pointer;
 }

@@ -17,7 +17,7 @@
             >
 
             <section class="form">
-                <h2>FORMULARIO TOP</h2>
+                <h2>SOBRE VOCÊ</h2>
     
                 <form action="/" method="POST">
                     <input 
@@ -37,7 +37,7 @@
                         <option value="facebook">Facebook</option>
                         <option value="instagram">Instagram</option>
                         <option value="linkedin">Linkedin</option>
-                        <option value="elogroup">Site da EloGroup</option>
+                        <option value="elogroup">Site EloGroup</option>
                         <option value="indication">Indicação</option>
                         <option value="telegram">Telegram</option>
                         <option value="whatsapp">WhatsApp</option>
@@ -51,18 +51,37 @@
                         placeholder="Qual?"
                     >
 
-                    <p>Possui redes sociais?</p>
-                    <input type="radio" id="yes" name="yes" value="Sim">
-                    <label for="yes">Sim</label>
-                    <input type="radio" id="no" name="no" value="Não">
-                    <label for="no">Não</label>
+                    
+                    <div class="social-media">
+                        <legend>Possui redes sociais?</legend>
+                        
+                        <label class="container">Sim
+                            <input type="radio">
+                            <span class="checkmark"></span>
+                        </label>
 
-                    <input type="checkbox" id="facebook" name="facebook" value="Facebook">
-                    <label for="facebook">Facebook</label>
-                    <input type="checkbox" id="instagram" name="instagram" value="Instagram">
-                    <label for="instagram">Instagram</label>
-                    <input type="checkbox" id="linkedin" name="linkedin" value="Linkedin">
-                    <label for="linkedin">Linkedin</label>
+                        <label class="container">Não
+                                <input type="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                    </div>
+                    
+                    <div class="select-social-media">
+                        <label class="container">Facebook
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+    
+                        <label class="container">Instagram
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+    
+                        <label class="container">Linkedin
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
 
                     <button>ENVIAR</button>
                 </form>
