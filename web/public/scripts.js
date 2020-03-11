@@ -9,6 +9,14 @@ function selectMedia(){
     }
 }
 
-if(document.getElementById("yes").checked == true){
-    console.log('DEU CHECK, MEU BOM')
+function showSocialMedia() {
+    document.querySelector('.select-social-media').classList.remove('hide')
+}
+
+function hideSocialMedia() {
+    document.querySelector('.select-social-media').classList.add('hide')
+}
+
+function getFormData() {
+    
 }

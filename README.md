@@ -1,4 +1,4 @@
-![EloGroup](img/EloGroup.png)
+![EloGroup](web/public/img/EloGroup.png)
 
 ---
 # Instruções para o Desafio de Programação

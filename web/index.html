@@ -23,7 +23,7 @@
 
             <section class="form">
     
-                <form action="/" method="POST">
+                <form action="/" onsubmit="getFormData()">
                     <input 
                         type="text" 
                         name="name" 
@@ -60,29 +60,29 @@
                         <legend>Possui redes sociais?</legend>
                         
                         <label class="container">Sim
-                            <input type="radio" name="radio" id="yes">
+                            <input type="radio" name="radio" value="yes" onclick="showSocialMedia()">
                             <span class="checkmark"></span>
                         </label>
 
                         <label class="container">Não
-                            <input type="radio" name="radio" id="no">
+                            <input type="radio" name="radio" value="no" onclick="hideSocialMedia()">
                             <span class="checkmark"></span>
                         </label>
                     </div>
                     
-                    <div class="select-social-media">
+                    <div class="select-social-media hide">
                         <label class="container">Facebook
-                            <input type="checkbox">
+                            <input type="checkbox" value="facebook">
                             <span class="checkmark"></span>
                         </label>
     
                         <label class="container">Instagram
-                            <input type="checkbox">
+                            <input type="checkbox" value="instagram">
                             <span class="checkmark"></span>
                         </label>
     
                         <label class="container">Linkedin
-                            <input type="checkbox">
+                            <input type="checkbox" value="linkedin">
                             <span class="checkmark"></span>
                         </label>
                     </div>
