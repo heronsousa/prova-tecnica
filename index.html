@@ -25,14 +25,13 @@
     
                 <form action="#">
                     <input 
-                        id="name"
                         type="text" 
                         name="name" 
                         placeholder="Nome completo"
+                        required
                     >
                     
                     <input 
-                        id="phone"
                         type="text" 
                         name="phone" 
                         placeholder="Telefone"
@@ -43,8 +42,8 @@
                         <option value="facebook">Facebook</option>
                         <option value="instagram">Instagram</option>
                         <option value="linkedin">Linkedin</option>
-                        <option value="elogroup">Site EloGroup</option>
-                        <option value="indication">Indicação</option>
+                        <option value="site elogroup">Site EloGroup</option>
+                        <option value="indicação">Indicação</option>
                         <option value="telegram">Telegram</option>
                         <option value="whatsapp">WhatsApp</option>
                         <option value="catho">Catho</option>
@@ -62,29 +61,29 @@
                         <legend>Possui redes sociais?</legend>
                         
                         <label class="container">Sim
-                            <input type="radio" name="radio" id="yes" onclick="showSocialMedia()">
+                            <input type="radio" name="radio" id="yes" onclick="showSocialMedia()" value="yes">
                             <span class="checkmark"></span>
                         </label>
 
                         <label class="container">Não
-                            <input type="radio" name="radio" id="no" onclick="hideSocialMedia()">
+                            <input type="radio" name="radio" id="no" onclick="hideSocialMedia()" value="no">
                             <span class="checkmark"></span>
                         </label>
                     </div>
                     
                     <div class="select-social-media hide">
                         <label class="container">Facebook
-                            <input type="checkbox" value="facebook">
+                            <input type="checkbox" name="social-media" value="facebook">
                             <span class="checkmark"></span>
                         </label>
     
                         <label class="container">Instagram
-                            <input type="checkbox" value="instagram">
+                            <input type="checkbox" name="social-media" value="instagram">
                             <span class="checkmark"></span>
                         </label>
     
                         <label class="container">Linkedin
-                            <input type="checkbox" value="linkedin">
+                            <input type="checkbox" name="social-media" value="linkedin">
                             <span class="checkmark"></span>
                         </label>
                     </div>
@@ -95,5 +94,7 @@
         </main>
 
         <script src="scripts.js"></script>
+        <script src="https://unpkg.com/imask"></script>
+        
     </body>
 </html>

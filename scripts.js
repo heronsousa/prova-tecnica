@@ -1,7 +1,13 @@
+document.addEventListener("DOMContentLoaded", function () {
+    IMask(document.querySelector('input[name="phone"]'), {
+      mask: '00 - 00000000'
+    })
+});
+
 function selectMedia(){
-    var x = document.querySelector('form select').selectedIndex;
+    var option = document.querySelector('form select').selectedIndex;
             
-    if(x===9){
+    if(option===9){
         document.querySelector('.other').classList.remove('hide')
     }
     else {
@@ -21,11 +27,24 @@ document.querySelector('form')
     .addEventListener("submit", function (event) {
         event.preventDefault();
 
-        const name = document.getElementsByTagName("input")[0].value;
-        const phone = document.getElementsByTagName("input")[1].value;
-        const other = document.getElementsByTagName("input")[2].value;
+        const name = document.querySelector('input[name="name"]').value;
+        const phone = document.querySelector('input[name="phone"]').value;
+        const selectMedia = document.querySelector('form select').value;
+        const socialMedia = document.querySelector('input[type="radio"]:checked');
 
-        const yes = document.querySelector('input[name="radio"]:checked').value;
-        
-        console.log(name, phone, other, yes);
+        if(name.trim().split(' ').length < 2){
+            alert('Informe nome e sobrenome.')
+        }
+
+        const media = (selectMedia != "other" ? selectMedia : document.querySelector('input[name="other"]').value);
+
+        const socialMediaArray = [];
+
+        if(socialMedia) {
+            if(socialMedia.value === "yes"){
+                document.getElementsByName('social-media').forEach(function(obj) {
+                    obj.checked ? socialMediaArray.push(obj.value) : '';
+                });
+            } 
+        }
     })
