@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>EloGroup</title>
+
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <main>
+
+            <div>
+                <img 
+                    class="logo"
+                    src="img/EloGroup.png" 
+                    alt="EloGroup Logo"
+                >
+
+                <h2>NOS CONTE MAIS <br> SOBRE VOCÊ</h2>
+            </div>
+
+            <section class="form">
+    
+                <form action="#">
+                    <input 
+                        id="name"
+                        type="text" 
+                        name="name" 
+                        placeholder="Nome completo"
+                    >
+                    
+                    <input 
+                        id="phone"
+                        type="text" 
+                        name="phone" 
+                        placeholder="Telefone"
+                    >
+                    
+                    <select id="met" onchange="selectMedia()">
+                        <option value="" disabled selected>Como nos conheceu?</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="linkedin">Linkedin</option>
+                        <option value="elogroup">Site EloGroup</option>
+                        <option value="indication">Indicação</option>
+                        <option value="telegram">Telegram</option>
+                        <option value="whatsapp">WhatsApp</option>
+                        <option value="catho">Catho</option>
+                        <option value="other">Outro</option>
+                    </select>
+
+                    <input
+                        class="other hide"
+                        type="text" 
+                        name="other" 
+                        placeholder="Qual?"
+                    >
+                    
+                    <div class="social-media">
+                        <legend>Possui redes sociais?</legend>
+                        
+                        <label class="container">Sim
+                            <input type="radio" name="radio" id="yes" onclick="showSocialMedia()">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="container">Não
+                            <input type="radio" name="radio" id="no" onclick="hideSocialMedia()">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="select-social-media hide">
+                        <label class="container">Facebook
+                            <input type="checkbox" value="facebook">
+                            <span class="checkmark"></span>
+                        </label>
+    
+                        <label class="container">Instagram
+                            <input type="checkbox" value="instagram">
+                            <span class="checkmark"></span>
+                        </label>
+    
+                        <label class="container">Linkedin
+                            <input type="checkbox" value="linkedin">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+
+                    <button>ENVIAR</button>
+                </form>
+            </section>
+        </main>
+
+        <script src="scripts.js"></script>
+    </body>
+</html>
