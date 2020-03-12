@@ -182,3 +182,14 @@ section form input.hide {
     visibility: hidden;
     margin-top: -35px;
 }
+
+@media (max-width: 720px){
+    main {
+        grid-template-columns: 1fr;
+        margin-top: 25px;
+    }
+
+    .logo {
+        width: 250px;
+    }
+}

@@ -33,7 +33,10 @@ document.querySelector('form')
         const socialMedia = document.querySelector('input[type="radio"]:checked');
 
         if(name.trim().split(' ').length < 2){
-            alert('Informe nome e sobrenome.')
+            swal({
+                text: 'Informe nome e sobrenome.',
+                icon: "error",
+            })
         }
         else {
             const metUs = (selectMedia != "other" ? selectMedia : document.querySelector('input[name="other"]').value);
@@ -50,11 +53,20 @@ document.querySelector('form')
 
             data = {name, phone, metUs, socialMediaArray};
 
-            fetch("http://localhost:8080", {
-                method: "POST",
-                body: JSON.stringify(data)
-            });
+            try {
+                fetch("http://localhost:8080", {
+                    method: "POST",
+                    body: JSON.stringify(data)
+                });
+            } catch (err) {
+                console.log(err);
+            }
 
             document.querySelector('button').disabled = true;
+
+            swal({
+                text: 'Dados enviados com suceso!',
+                icon: "success",
+            })
         }
     })
