@@ -35,16 +35,26 @@ document.querySelector('form')
         if(name.trim().split(' ').length < 2){
             alert('Informe nome e sobrenome.')
         }
+        else {
+            const metUs = (selectMedia != "other" ? selectMedia : document.querySelector('input[name="other"]').value);
+    
+            const socialMediaArray = [];
+    
+            if(socialMedia) {
+                if(socialMedia.value === "yes"){
+                    document.getElementsByName('social-media').forEach(function(obj) {
+                        obj.checked ? socialMediaArray.push(obj.value) : '';
+                    });
+                } 
+            }
 
-        const media = (selectMedia != "other" ? selectMedia : document.querySelector('input[name="other"]').value);
+            data = {name, phone, metUs, socialMediaArray};
 
-        const socialMediaArray = [];
+            fetch("http://localhost:8080", {
+                method: "POST",
+                body: JSON.stringify(data)
+            });
 
-        if(socialMedia) {
-            if(socialMedia.value === "yes"){
-                document.getElementsByName('social-media').forEach(function(obj) {
-                    obj.checked ? socialMediaArray.push(obj.value) : '';
-                });
-            } 
+            document.querySelector('button').disabled = true;
         }
     })
