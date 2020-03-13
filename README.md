@@ -1,6 +1,6 @@
 # Desafio de Programação EloGroup
 
-![EloGroupGif](assets/EloGroupGif.gif)
+![EloGroupGif](assets/img/EloGroupGif.gif)
 
 ---
 
